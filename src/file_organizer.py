@@ -35,7 +35,7 @@ class FileOrganizer:
 def main() -> None:
     """Hauptfunktion."""
     import sys
-    
+
     organizer = FileOrganizer(".")
     files = organizer.scan_files()
 

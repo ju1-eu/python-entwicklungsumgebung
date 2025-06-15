@@ -17,10 +17,10 @@ def test_scan_files(tmp_path: Path) -> None:
     (tmp_path / "test.py").touch()
     (tmp_path / "doc.md").touch()
     (tmp_path / "data.json").touch()
-    
+
     organizer = FileOrganizer(tmp_path)
     files = organizer.scan_files()
-    
+
     assert ".py" in files
     assert ".md" in files
     assert ".json" in files
@@ -30,9 +30,9 @@ def test_scan_files(tmp_path: Path) -> None:
 def test_main(capsys: pytest.CaptureFixture[str]) -> None:
     """Test der main Funktion."""
     from src.file_organizer import main
-    
+
     main()
-    
+
     captured = capsys.readouterr()
     assert "Gefundene Dateitypen:" in captured.out
     assert "Dateien" in captured.out
