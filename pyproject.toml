@@ -28,7 +28,6 @@ warn_return_any = true
 strict = true
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
 pythonpath = ["."]  # Wichtig für Imports
 python_files = ["test_*.py", "*_test.py"]
 addopts = [
@@ -51,5 +50,3 @@ exclude_lines = [
     "if __name__ == .__main__.:",
 ]
 
-[tool.ruff.lint.extend-exclude]
-paths = ["archive/", "*.lua", "*.css", "*.md", "*.sh"]

@@ -3,7 +3,7 @@
 import nox
 
 
-@nox.session(python=["3.11", "3.12", "3.13"])
+@nox.session(python=["3.13"])
 def tests(session):
     """Tests mit Coverage ausführen."""
     session.install("pytest", "pytest-cov", "coverage[toml]")
