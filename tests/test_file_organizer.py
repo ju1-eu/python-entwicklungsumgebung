@@ -1,7 +1,9 @@
 """Tests für das FileOrganizer-Modul."""
 
 from pathlib import Path
+
 import pytest
+
 from src.file_organizer import FileOrganizer
 
 
